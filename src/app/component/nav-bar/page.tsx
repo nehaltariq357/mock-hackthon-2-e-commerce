@@ -7,7 +7,7 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
   return (
     <main>
-      <div className="flex justify-around h-20 items-center px-5 md:px-10">
+      <div className="flex justify-around h-20 items-center px-5 md:px-10 border-2 border-slate-500-200 border-b-slate-500-500">
         {/* Logo */}
         <ul>
           <li className="font-bold text-lg cursor-pointer">Exclusive</li>
