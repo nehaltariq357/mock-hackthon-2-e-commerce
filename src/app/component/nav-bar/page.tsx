@@ -67,7 +67,7 @@ const NavBar = () => {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-inputColor p-5">
+        <div className="md:hidden bg-inputColor p-5 min-w-full">
           <div className="grid grid-cols-2">
             <div>
               <ul className="flex flex-col gap-4">
