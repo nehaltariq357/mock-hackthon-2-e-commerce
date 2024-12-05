@@ -7,7 +7,7 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
   return (
     <main>
-      <div className="flex justify-around h-20 items-center px-5 md:px-10 border-2 border-slate-500-200 border-b-slate-500-500">
+      <div className="flex justify-around h-20 items-center px-5 md:px-10 border-b-slate-200 border-2">
         {/* Logo */}
         <ul>
           <li className="font-bold text-lg cursor-pointer">Exclusive</li>
@@ -67,7 +67,7 @@ const NavBar = () => {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-inputColor p-5 min-w-full">
+        <div className="md:hidden bg-inputColor p-5 min-w-full fixed z-50">
           <div className="grid grid-cols-2">
             <div>
               <ul className="flex flex-col gap-4">
