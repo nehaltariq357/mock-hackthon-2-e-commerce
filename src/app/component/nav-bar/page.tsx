@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { RiSearchLine } from "react-icons/ri";
 import { IoHeartOutline, IoCartOutline } from "react-icons/io5";
-import { RxHamburgerMenu } from "react-icons/rx";
+import { FaBars, FaTimes } from "react-icons/fa";
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -56,18 +56,18 @@ const NavBar = () => {
           </li>
 
           {/* Hamburger Menu */}
-          <li className="md:hidden">
-            <RxHamburgerMenu
-              onClick={() => setOpen(!open)}
-              className="text-2xl cursor-pointer"
-            />
-          </li>
+          <button
+            className="md:hidden text-2xl cursor-pointer"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? <FaTimes /> : <FaBars />}
+          </button>
         </ul>
       </div>
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-inputColor p-5 min-w-full fixed z-50">
+        <div className="md:hidden bg-inputColor p-5 min-w-full fixed z-50 ">
           <div className="grid grid-cols-2">
             <div>
               <ul className="flex flex-col gap-4">
