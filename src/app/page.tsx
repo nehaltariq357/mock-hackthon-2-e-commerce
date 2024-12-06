@@ -1,5 +1,6 @@
 
 import Banner from "./component/Banner/page";
+import Flash_sale from "./component/flash-sale/page";
 import NavBar from "./component/nav-bar/page";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
   <div>
     <NavBar/>
     <Banner/>
+    <Flash_sale/>
   </div>
   );
 }

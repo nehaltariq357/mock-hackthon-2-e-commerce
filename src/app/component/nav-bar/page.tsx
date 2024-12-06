@@ -10,7 +10,7 @@ const NavBar = () => {
       <div className="flex justify-around h-20 items-center px-5 md:px-10 border-b-slate-200 border-2">
         {/* Logo */}
         <ul>
-          <li className="font-bold text-lg cursor-pointer">Exclusive</li>
+          <li className="font-bold text-2xl cursor-pointer">Exclusive</li>
         </ul>
 
         {/* Tabs */}

@@ -24,7 +24,7 @@ const Banner = () => {
 
   return (
     <main>
-      <div className="relative">
+      <div className="relative md:mx-16">
         {/* Hamburger menu icon */}
         <div className="absolute top-4 left-4 md:hidden z-30">
           <button onClick={() => setMenuOpen(!menuOpen)} className="text-2xl">
@@ -75,7 +75,7 @@ const Banner = () => {
                     src={img}
                     alt={`Banner image ${i}`}
                     className="object-contain w-full h-full"
-                    width={900}
+                    width={1000}
                     height={100}
                   />
                 </div>
