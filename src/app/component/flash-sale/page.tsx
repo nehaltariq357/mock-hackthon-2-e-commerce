@@ -56,55 +56,63 @@ const Flash_sale = () => {
 
     return () => clearInterval(timer);
   }, []);
+
   return (
     <main>
-      <div className="">
-    {/* flash sale */}
-        <h1 className="text-red-600">Today’s</h1>
-        <div className="flex justify-between">
-          <h1 className="text-3xl">Flash Sales</h1>
-          <ul className="flex">
-            <li>day: {days}</li>
-            <li>hours: {hours}</li>
-            <li>minutes: {minutes}</li>
-            <li>seconds: {seconds}</li>
-          </ul>
-          <ul className="flex">
-            <li>
+      <div className="mx-36 space-y-5">
+        <div className="flex gap-3">
+          <span className="bg-red-600 w-4 rounded-sm"></span>
+          <h4 className="text-red-600 font-semibold text-lg">Today’s</h4>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+          {/* Left Grid */}
+          <div className="flex justify-between items-center">
+            <h1 className="text-4xl font-bold">Flash Sales</h1>
+            {/* Countdown Timer */}
+            <div className="flex gap-8">
+              {/* Days */}
+              <div className="text-center">
+                <span className="text-sm font-medium">Days</span>
+                <h1 className="text-4xl font-bold mt-1">{days}</h1>
+              </div>
+              {/* Hours */}
+              <div className="text-center">
+                <span className="text-sm font-medium">Hours</span>
+                <h1 className="text-4xl font-bold mt-1">{hours}</h1>
+              </div>
+              {/* Minutes */}
+              <div className="text-center">
+                <span className="text-sm font-medium">Minutes</span>
+                <h1 className="text-4xl font-bold mt-1">{minutes}</h1>
+              </div>
+              {/* Seconds */}
+              <div className="text-center">
+                <span className="text-sm font-medium">Seconds</span>
+                <h1 className="text-4xl font-bold mt-1">{seconds}</h1>
+              </div>
+            </div>
+          </div>
+          {/* Right Grid */}
+          <div>
+            <div className="flex justify-end gap-6">
               <Image
                 src={`/images/left-arrow.png`}
-                alt="pic"
-                width={30}
+                alt="left-arrow"
+                width={40}
                 height={20}
               />
-            </li>
-            <li>
               <Image
                 src={`/images/right-arrow.png`}
-                alt="pic"
-                width={30}
+                alt="right-arrow"
+                width={40}
                 height={20}
               />
-            </li>
-          </ul>
-        </div>
-        {flash_sale.map((item) => (
-          <div key={item.id} >
-           <div className="flex">
-           <div>
-              <p>
-                <Image src={item.image} alt="pic" width={200} height={200} />
-              </p>
-              <p>{item.title}</p>
-              <p>{item.price}</p>
-              <p>{star_rating(item.rating)}</p>
             </div>
-           </div>
           </div>
-        ))}
+        </div>
       </div>
     </main>
   );
-}  
+}
 
 export default Flash_sale;
